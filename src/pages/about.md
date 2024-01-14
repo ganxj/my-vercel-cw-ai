@@ -3,34 +3,18 @@ layout: ../layouts/AboutLayout.astro
 title: "About Us"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+Welcome to Crew AI - an innovative artificial intelligence collaboration system!
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+**Who Are We?**
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+Crew AI is a passionate team dedicated to driving innovation in the field of artificial intelligence. Our system, built on principles of collaborative teamwork, modular design, and simplicity, provides users with powerful and flexible tools, enabling different AI agents to work together efficiently.
 
 <div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="crewai">
 </div>
 
-## Tech Stack
+**Future Outlook:**
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+Crew AI is committed to continuous improvement of user experience, integration of advanced AI models, and providing more flexible ways to use local models. We look forward to exploring the future of intelligent collaboration with users, creating even more powerful tools for innovation and challenges.
 
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+Join the journey with Crew AI, and together let's shape the future of intelligent collaboration!

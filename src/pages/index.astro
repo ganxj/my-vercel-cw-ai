@@ -6,14 +6,16 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
+import CardFaq from "@components/CardFaq";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
+import getFaqList from "@utils/getFaqList";
 import { SOCIALS } from "@config";
 
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const faqs = getFaqList();
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -22,7 +24,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>Crew Ai</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -41,19 +43,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        Although individual tasks are crucial, Crew AI truly excels when multiple intelligent agents come together as a team, showcasing seamless collaboration and revealing enhanced overall capabilities.
       </p>
       <p>
-        Read the blog posts or check
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
+        Crew AI emphasizes the advantages of team collaboration through modular design and simplicity principles, along with a vision that transcends traditional automation, achieving flawless synergy among multiple intelligent agents. In practical applications, Crew AI underscores usability and internal collaboration, making it a genuinely practical tool in the real world.
       </p>
       {
         // only display if at least one social link is enabled
@@ -68,25 +61,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <Hr />
 
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/posts/${slug}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
+    <section id="faq">
+      <h2>FAQ</h2>
+      <ul>
+        {faqs.map(({ question, answer }) => (
+          <CardFaq
+            question={question}
+            answer={answer}
+            secHeading={false}
+          />
+        ))}
+      </ul>
+    </section>
+
+    <Hr />
 
     <section id="recent-posts">
       <h2>Recent Posts</h2>
@@ -117,6 +105,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </LinkButton>
       </div>
     </section>
+
+    <Hr />
+
+    <section id="link">
+        <a class="link-a" href="https://chatg.pt/DWjSBZn">🤖 Start trial</a>
+        <a class="link-a" href="https://github.com/joaomdmoura/crewAI/wiki">📃 Documentation</a>
+    </section>
+
   </main>
 
   <Footer />
@@ -146,16 +142,26 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
   }
 
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
+  /* ===== faq & Recent Posts Sections ===== */
+  #faq,
   #recent-posts {
     @apply pb-6 pt-12;
   }
-  #featured h2,
+  #faq h2,
   #recent-posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
+  }
+  #link {
+    @apply mt-4 pt-2 pb-6;
+  }
+
+  .link-a {
+    height: 40px;
+    border: solid 1px #333333;
+    border-radius: 20px;
+    padding: 10px 20px;
   }
 </style>
