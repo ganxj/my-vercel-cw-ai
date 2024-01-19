@@ -11,7 +11,7 @@ tags:
 description: Crew AI, an innovative AI collaboration system, orchestrates role-based agents for efficient teamwork. Open source and future-driven, it aims to enhance user experience, integrate advanced models, and optimize local model usage.
 ---
 
-![Crew AI1](@assets/images/crewai1.jpg)
+![Crew AI](@assets/images/crewai1.jpg)
 
 _Crew AI (Crew Artificial Intelligence)_ is an artificial intelligence system that emphasizes collaboration, modular design, and simplicity principles. Its uniqueness lies in the ability to enable different AI agents to efficiently collaborate as a team, collectively tackling complex tasks. Similar to organizing a team composed of researchers, writers, and planners, each agent plays a specific role within the team.
 
