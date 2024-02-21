@@ -3,7 +3,7 @@ import { SITE } from "@config";
 
 const robots = `
 User-agent: Googlebot
-Disallow: /nogooglebot/
+Allow: /ads.txt
 
 User-agent: *
 Allow: /
