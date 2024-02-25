@@ -3,7 +3,7 @@ author: xj gan
 pubDatetime: 2024-02-25T10:57:52.737Z
 title: Crewai:Agent
 slug: crewai-agent
-featured: true
+featured: false
 ogImage: https://github.com/ganxj/crewAI/blob/main/docs/crewAI-mindmap.png
 tags:
   - Crew AI
